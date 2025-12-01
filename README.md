@@ -29,4 +29,21 @@ administrator@debian:/tmp/demo $ curl http://localhost:10080
 This is the demo app running on :8080
 ```
 
+###### Dockerhub
 
+The image is avaialable on [hub.docker.com](https://hub.docker.com) with the following image name: `<username>/gd-david-project`.
+
+You can pull the image with the following command.
+
+``` bash
+docker pull <username>/gd-david-project:latest
+```
+
+Or just simply run the app the following way.
+
+``` bash
+docker run -d -p 8080:8080 <username>/gd-david-project:latest
+```
+
+> [!TIP]
+> This workflow uses two github  action secrets to authenticate to docker hub, one is `DOCKERHUB_TOKEN` the other is `DOCKERHUB_USERNAME`. Change these to point the solution to another user or repository.
